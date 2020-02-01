@@ -54,3 +54,10 @@
 
 ## Random
 - https://medium.com/@omariosouto/001-como-lidar-de-uma-forma-mais-feliz-com-classes-css-condicionais-no-react-dicas-de-react-915c13a2ab0e
+
+
+## Dicas pra vida
+- https://github.com/frontendbr/vagas/
+- https://twitter.com/loiane
+- https://www.meetup.com/pt-BR/AngularJS-Sao-Paulo/?chapter_analytics_code=UA-1805748-5
+- https://semver.org/
