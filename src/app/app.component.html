@@ -11,7 +11,7 @@
           </button>
 
           <!-- newEmail--active -->
-          <form class="newEmail cmailForm">
+          <form class="newEmail cmailForm" [ngClass]="{ 'newEmail--active': isNewEmailFormActive }">
             <div class="newEmail__card demo-card-wide mdl-card mdl-shadow--2dp">
               <div class="newEmail__titleArea mdl-card__title">
                 <h2 class="newEmail__title mdl-card__title-text">Novo Email</h2>
@@ -56,7 +56,7 @@
                 </button>
               </div>
               <div class="newEmail__topMenu mdl-card__menu">
-                <button type="button" class="mdl-button mdl-button--icon">
+                <button type="button" class="mdl-button mdl-button--icon" (click)="toggleNewEmailFormActive()">
                   <span class="material-icons">close</span>
                 </button>
               </div>
