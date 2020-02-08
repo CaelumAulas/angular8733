@@ -68,6 +68,8 @@
 - ngSumbit vs Submit = Por padrão o ngSubmit faz o preventDefault()
 - Clean Archtechure = https://www.youtube.com/watch?v=Nsjsiz2A9mg
 - SOLID para ninjas do Aniche = https://www.casadocodigo.com.br/products/livro-oo-solid
+- Para quem quiser fazer um router: https://developer.mozilla.org/en-US/docs/Web/API/History_API;
+- 
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado

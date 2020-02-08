@@ -1,47 +1,9 @@
 import { Component } from '@angular/core';
-
-// - OK Interceptar o submit do usário
-// - Pegar os dados do novo email e adicionar no array
-// - Limpar o objeto do novo email
-
+// Porta de entrada para os modulos da aplicação
 @Component({
   selector: 'app-root',
   // templateUrl: './app.component.html',
-  template: '<router-outlet></router-outlet>',
+  template: `<router-outlet></router-outlet>`,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  emails = [
-    {
-      assunto: 'Email 01', conteudo: 'Alo alo w brazil', para: 'mario.souto@caelum.com.br',
-    },
-    {
-      assunto: 'Email 02',
-      conteudo: 'Alo alo w brazil',
-      para: 'mario.souto@caelum.com.br',
-    },
-  ];
-
-  title = 'Caixa de entrada';
-  isNewEmailFormActive = false;
-
-  novoEmail = {
-    assunto: 'Mano olah que show!',
-    conteudo: 'Alo alo w brazil',
-    para: '',
-  }
-
-  toggleNewEmailFormActive() {
-    this.isNewEmailFormActive = !this.isNewEmailFormActive;
-  }
-
-  handleSubmitOfNewEmail(formEmail) {
-    // Fail Fast Validations
-    if(formEmail.invalid) {
-      return false;
-    }
-
-    this.emails.push(this.novoEmail);
-    this.novoEmail = { assunto: '', conteudo: '', para: '' };
-  }
-}
+export class AppComponent {}
