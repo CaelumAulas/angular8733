@@ -63,6 +63,11 @@
 - https://semver.org/
 - Como o angular funciona: https://medium.com/reverse-engineering-angular/angular-deep-dive-zone-js-how-does-it-monkey-patches-various-apis-9cc1c7fcc321
 - Como mexer com arrays (dia 4): https://javascript30.com/
+- #campoPara="ngModel"
+  - Essa é a sintaxe que converte o tipo de um elemento para um tipo de forms do angular
+- ngSumbit vs Submit = Por padrão o ngSubmit faz o preventDefault()
+- Clean Archtechure = https://www.youtube.com/watch?v=Nsjsiz2A9mg
+- SOLID para ninjas do Aniche = https://www.casadocodigo.com.br/products/livro-oo-solid
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado

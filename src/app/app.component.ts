@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  // templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -27,16 +28,19 @@ export class AppComponent {
   novoEmail = {
     assunto: 'Mano olah que show!',
     conteudo: 'Alo alo w brazil',
-    para: 'mario.souto@caelum.com.br',
+    para: '',
   }
 
   toggleNewEmailFormActive() {
     this.isNewEmailFormActive = !this.isNewEmailFormActive;
   }
 
-  handleSubmitOfNewEmail(event) {
-    event.preventDefault();
-    console.log('this.novoEmail', this.novoEmail);
+  handleSubmitOfNewEmail(formEmail) {
+    // Fail Fast Validations
+    if(formEmail.invalid) {
+      return false;
+    }
+
     this.emails.push(this.novoEmail);
     this.novoEmail = { assunto: '', conteudo: '', para: '' };
   }

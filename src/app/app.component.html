@@ -17,20 +17,26 @@
           </button>
 
           <!-- newEmail--active -->
-          <form (submit)="handleSubmitOfNewEmail($event)" class="newEmail cmailForm" [ngClass]="{ 'newEmail--active': isNewEmailFormActive }">
+          <!-- Validação de formulário por template -->
+          <form
+            #formEmail="ngForm"
+            (ngSubmit)="handleSubmitOfNewEmail(formEmail)" class="newEmail cmailForm" [ngClass]="{ 'newEmail--active': isNewEmailFormActive }">
             <div class="newEmail__card demo-card-wide mdl-card mdl-shadow--2dp">
               <div class="newEmail__titleArea mdl-card__title">
                 <h2 class="newEmail__title mdl-card__title-text">Novo Email</h2>
               </div>
-              <div class="newEmail__body mdl-card__supporting-text">
+              <!-- #elementoCoiso
+              const elementoCoiso = document.querySelector('.newEmail__body') -->
+              <div  class="newEmail__body mdl-card__supporting-text">
                 <!-- Form Fields -->
                 <!-- [Para] -->
                 <div class="cmailInputForm">
-                  <div class="mdl-textfield mdl-textfield--floating-label">
+                  <div
+                    [ngClass]="{ 'is-invalid': campoPara.invalid && campoPara.touched }"
+                    class="mdl-textfield mdl-textfield--floating-label">
                     <input
-                    [value]="novoEmail.para"
-                    (input)="novoEmail.para = $event.target.value"
-                    #campoPara
+                    [(ngModel)]="novoEmail.para"
+                    #campoPara="ngModel"
                     required type="email" name="para" id="para" placeholder=" " class="mdl-textfield__input">
                     <span class="mdl-textfield__error">Informar um email é obrigatório!</span>
                     <label class="mdl-textfield__label" for="para">Para: </label>
@@ -68,8 +74,8 @@
                 <!-- ./Form Fields -->
               </div>
               <div class="mdl-card__actions mdl-card--border">
-                <button class="mdl-button">
-                  Enviar
+                <button class="mdl-button" [disabled]="formEmail.invalid">
+                  Enviar {{formEmail.invalid}}
                 </button>
               </div>
               <div class="newEmail__topMenu mdl-card__menu">
