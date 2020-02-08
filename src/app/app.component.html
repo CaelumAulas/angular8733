@@ -3,6 +3,12 @@
     <main class="mdl-layout__content">
       <div class="page-content">
 
+        <article *ngFor="let email of emails">
+          <h1>Titulo do Email: {{ email.assunto }}</h1>
+          <p>Para: {{ email.para }}</p>
+          <p>Conteúdo: {{ email.conteudo }}</p>
+        </article>
+
         <div class="mdl-grid">
           <!-- Floating Multiline Textfield -->
           <button (click)="toggleNewEmailFormActive()" class="globalFab tooltip btn mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
@@ -11,7 +17,7 @@
           </button>
 
           <!-- newEmail--active -->
-          <form class="newEmail cmailForm" [ngClass]="{ 'newEmail--active': isNewEmailFormActive }">
+          <form (submit)="handleSubmitOfNewEmail($event)" class="newEmail cmailForm" [ngClass]="{ 'newEmail--active': isNewEmailFormActive }">
             <div class="newEmail__card demo-card-wide mdl-card mdl-shadow--2dp">
               <div class="newEmail__titleArea mdl-card__title">
                 <h2 class="newEmail__title mdl-card__title-text">Novo Email</h2>
@@ -21,7 +27,11 @@
                 <!-- [Para] -->
                 <div class="cmailInputForm">
                   <div class="mdl-textfield mdl-textfield--floating-label">
-                    <input required type="email" name="para" id="para" placeholder=" " class="mdl-textfield__input">
+                    <input
+                    [value]="novoEmail.para"
+                    (input)="novoEmail.para = $event.target.value"
+                    #campoPara
+                    required type="email" name="para" id="para" placeholder=" " class="mdl-textfield__input">
                     <span class="mdl-textfield__error">Informar um email é obrigatório!</span>
                     <label class="mdl-textfield__label" for="para">Para: </label>
                     <span class="mdl-textfield__formline"></span>
@@ -31,7 +41,9 @@
                 <!-- [Assunto] -->
                 <div class="cmailInputForm">
                   <div class="mdl-textfield mdl-textfield--floating-label">
-                    <input required type="text" name="assunto" id="assunto" placeholder=" " class="mdl-textfield__input">
+                    <input
+                      [value]="novoEmail.assunto"
+                      (input)="novoEmail.assunto = $event.target.value" required type="text" name="assunto" id="assunto" placeholder=" " class="mdl-textfield__input">
                     <span class="mdl-textfield__error">Informar um assunto é obrigatório!</span>
                     <label class="mdl-textfield__label" for="assunto">Assunto: </label>
                     <span class="mdl-textfield__formline"></span>
@@ -41,7 +53,12 @@
                 <!-- [Conteúdo] -->
                 <div class="cmailInputForm">
                   <div class="mdl-textfield mdl-textfield--floating-label">
-                    <textarea name="conteudo" id="conteudo" placeholder=" " class="mdl-textfield__input"></textarea>
+                    <textarea
+                    [value]="novoEmail.conteudo"
+                    (input)="novoEmail.conteudo = $event.target.value"
+                    name="conteudo" id="conteudo" placeholder=" " class="mdl-textfield__input">
+
+                    </textarea>
                     <span class="mdl-textfield__error">Informar um conteúdo é obrigatório!</span>
                     <label class="mdl-textfield__label" for="conteudo">Conteúdo: </label>
                     <span class="mdl-textfield__formline"></span>

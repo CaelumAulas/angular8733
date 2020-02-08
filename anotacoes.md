@@ -61,3 +61,10 @@
 - https://twitter.com/loiane
 - https://www.meetup.com/pt-BR/AngularJS-Sao-Paulo/?chapter_analytics_code=UA-1805748-5
 - https://semver.org/
+- Como o angular funciona: https://medium.com/reverse-engineering-angular/angular-deep-dive-zone-js-how-does-it-monkey-patches-various-apis-9cc1c7fcc321
+- Como mexer com arrays (dia 4): https://javascript30.com/
+
+## Quando o angular atualiza a tela
+- Quando algum evento assincrono for disparado
+  - Quando quiser pegar algum evento do usuário: https://developer.mozilla.org/en-US/docs/Web/Events
+- Quando algum dado do modelo (.ts) for alterado (Two Way data binding)
