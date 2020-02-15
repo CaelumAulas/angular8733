@@ -69,7 +69,8 @@
 - Clean Archtechure = https://www.youtube.com/watch?v=Nsjsiz2A9mg
 - SOLID para ninjas do Aniche = https://www.casadocodigo.com.br/products/livro-oo-solid
 - Para quem quiser fazer um router: https://developer.mozilla.org/en-US/docs/Web/API/History_API;
-- 
+- DDD: https://www.amazon.com.br/Implementando-Domain-Driven-design-Vernon/dp/8576089521/ref=asc_df_8576089521/?tag=googleshopp00-20&linkCode=df0&hvadid=379748659420&hvpos=1o1&hvnetw=g&hvrand=5727399598867156421&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-460804278877&psc=1
+- Sigam a talita pagani: https://www.youtube.com/watch?v=4URTZHk6tz0
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado
