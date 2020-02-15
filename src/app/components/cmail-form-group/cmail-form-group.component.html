@@ -1,0 +1,16 @@
+<div class="cmailInputForm">
+  <div
+    [ngClass]="{ 'is-invalid': false }"
+    class="mdl-textfield mdl-textfield--floating-label">
+
+    <!-- O input entra na tag e sai aqui -->
+    <ng-content></ng-content>
+    <!-- O input entra na tag e sai aqui -->
+
+    <span class="mdl-textfield__error">Informar um "Para" é obrigatório!</span>
+    <label class="mdl-textfield__label" for="para">Para: </label>
+    <span class="mdl-textfield__formline"></span>
+  </div>
+</div>
+
+

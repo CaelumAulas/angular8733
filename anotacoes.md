@@ -75,3 +75,18 @@
 - Quando algum evento assincrono for disparado
   - Quando quiser pegar algum evento do usuário: https://developer.mozilla.org/en-US/docs/Web/Events
 - Quando algum dado do modelo (.ts) for alterado (Two Way data binding)
+
+
+## Fluxo do cadastro
+
+
+### Campos
+- Nome
+- Usuario
+- Senha
+- Avatar
+
+### Como salvar os dados?
+- API, serviço
+
+### Depois vamos pro login

@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { ModuloDeRotasConfiguradas } from './app.routes';
 import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { CmailInboxComponent } from './modules/inbox/inbox.component';
+import { CmailFormGroup } from './components/cmail-form-group/cmail-form-group.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ // Components
     AppComponent,
     HeaderComponent,
     CmailCadastroComponent,
-    CmailInboxComponent
+    CmailInboxComponent,
+    CmailFormGroup
   ],
   imports: [ // Modulos do Angular ou os que você cria
     BrowserModule,
