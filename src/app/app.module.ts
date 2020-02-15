@@ -9,6 +9,7 @@ import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { CmailInboxComponent } from './modules/inbox/inbox.component';
 import { CmailFormGroup } from './components/cmail-form-group/cmail-form-group.component';
 import { CmailInputFieldDirective } from './components/cmail-form-group/cmail-input-field.directive';
+import { LoginComponent, ComponenteDeTitulo } from './modules/login/login.component';
 
 @NgModule({
   declarations: [ // Components, Diretivas
@@ -17,7 +18,9 @@ import { CmailInputFieldDirective } from './components/cmail-form-group/cmail-in
     CmailCadastroComponent,
     CmailInboxComponent,
     CmailFormGroup,
-    CmailInputFieldDirective
+    CmailInputFieldDirective,
+    LoginComponent,
+    ComponenteDeTitulo
   ],
   imports: [ // Modulos do Angular ou os que você cria
     BrowserModule,

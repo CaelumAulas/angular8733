@@ -1,11 +1,3 @@
-
-<!--
-  1 - Passar o ngSubmit
-  2 -handleCadastroDeUsuario()
-
-
- -->
-
 <form (ngSubmit)="handleCadastroDeUsuario()" [formGroup]="formCadastro">
   <cmail-form-field [campo]="formCadastro.get('name')">
     <input
@@ -16,7 +8,7 @@
   </cmail-form-field>
 
 
-  <cmail-form-field [campo]="formCadastro.get('username')">
+  <cmail-form-field>
     <input
       cmailInputField
       id="username"

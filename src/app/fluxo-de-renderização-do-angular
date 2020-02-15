@@ -1,0 +1,12 @@
+Acessou uma página - /login
+- index.html
+  - Carrega todos os scripts da aplicação
+- app.module.ts (registramos os componentes)
+- app.component.ts (declaramos um componente)
+- app.component.html
+  <cmail-header titleHeader="Valor">
+  cmailHeader(titleHeader)
+  new CmailHeader(titleHeader)
+    - header.component.ts
+    - header.component.html
+

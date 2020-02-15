@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+// CmailCadastroComponent.formCadastro
+// {
+//   valid:
+//   controls: {
+//     name: ...
+//   }
+// }
 
 @Component({
   selector: 'cmail-cadastro-page',
@@ -14,6 +21,10 @@ export class CmailCadastroComponent {
     avatar: new FormControl('', []),
     password: new FormControl('', []),
   });
+
+  constructor() {
+    console.log(this.formCadastro);
+  }
 
   handleCadastroDeUsuario() {
     console.log('Submit realizado com sucessinhos!!!');
