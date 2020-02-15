@@ -1,6 +1,6 @@
 <div class="cmailInputForm">
   <div
-    [ngClass]="{ 'is-invalid': false }"
+    [ngClass]="{ 'is-invalid': campo.invalid && campo.touched }"
     class="mdl-textfield mdl-textfield--floating-label">
 
     <!-- O input entra na tag e sai aqui -->

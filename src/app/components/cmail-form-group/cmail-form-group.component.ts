@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
 
 
 @Component({
@@ -6,6 +6,7 @@ import { Component, ElementRef } from '@angular/core';
   templateUrl: './cmail-form-group.component.html',
 })
 export class CmailFormGroup {
+  @Input() campo;
   valorDaLabel = 'Bagulhos';
   idDoInput = '';
 

@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CmailCadastroComponent {
   formCadastro = new FormGroup({
-    name: new FormControl('', [ Validators.email ]),
+    name: new FormControl('', [Validators.required]),
     username: new FormControl('', []),
     phone: new FormControl('', []),
     avatar: new FormControl('', []),
@@ -17,8 +17,8 @@ export class CmailCadastroComponent {
 
   handleCadastroDeUsuario() {
     console.log('Submit realizado com sucessinhos!!!');
-    console.log(this.formCadastro);
-    console.log(this.formCadastro.value);
+    console.log('valid?', this.formCadastro.get('name').valid);
+    // console.log(this.formCadastro.value);
   }
 
 }

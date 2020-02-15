@@ -7,7 +7,7 @@
  -->
 
 <form (ngSubmit)="handleCadastroDeUsuario()" [formGroup]="formCadastro">
-  <cmail-form-field>
+  <cmail-form-field [campo]="formCadastro.get('name')">
     <input
       cmailInputField
       name="name"
@@ -16,7 +16,7 @@
   </cmail-form-field>
 
 
-  <cmail-form-field>
+  <cmail-form-field [campo]="formCadastro.get('username')">
     <input
       cmailInputField
       id="username"
@@ -26,7 +26,7 @@
   </cmail-form-field>
 
 
-  <cmail-form-field>
+  <cmail-form-field [campo]="formCadastro.get('phone')">
     <input
       cmailInputField
       id="phone"
@@ -35,7 +35,7 @@
       placeholder="Telefone">
   </cmail-form-field>
 
-  <cmail-form-field>
+  <cmail-form-field [campo]="formCadastro.get('avatar')">
     <input
       cmailInputField
       id="avatar"
@@ -44,7 +44,7 @@
       placeholder="Avatar">
   </cmail-form-field>
 
-  <cmail-form-field>
+  <cmail-form-field [campo]="formCadastro.get('password')">
     <input
       cmailInputField
       id="password"
