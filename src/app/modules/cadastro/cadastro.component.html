@@ -1,41 +1,58 @@
 
-<form>
-  <!--
-    - OK Você vao pegar o name do input
-    - OK Atribuir um ID dinamicamente pro input
-    - Fazer o for do label dentro do cmail-form-field, ter o valor do id setado anteriormente.
-    http://dontpad.com/soutinho
-  -->
+<!--
+  1 - Passar o ngSubmit
+  2 -handleCadastroDeUsuario()
+
+
+ -->
+
+<form (ngSubmit)="handleCadastroDeUsuario()" [formGroup]="formCadastro">
+  <cmail-form-field>
+    <input
+      cmailInputField
+      name="name"
+      formControlName="name"
+      placeholder="Nome">
+  </cmail-form-field>
+
+
   <cmail-form-field>
     <input
       cmailInputField
       id="username"
       name="username"
+      formControlName="username"
       placeholder="Usuário">
+  </cmail-form-field>
+
+
+  <cmail-form-field>
+    <input
+      cmailInputField
+      id="phone"
+      name="phone"
+      formControlName="phone"
+      placeholder="Telefone">
   </cmail-form-field>
 
   <cmail-form-field>
     <input
       cmailInputField
-      name="email"
-      placeholder="E-mail">
+      id="avatar"
+      name="avatar"
+      formControlName="avatar"
+      placeholder="Avatar">
   </cmail-form-field>
 
+  <cmail-form-field>
+    <input
+      cmailInputField
+      id="password"
+      name="password"
+      formControlName="password"
+      placeholder="Senha">
+  </cmail-form-field>
 
-  <!-- [Para]
-  <div class="cmailInputForm">
-    <div
-      [ngClass]="{ 'is-invalid': false }"
-      class="mdl-textfield mdl-textfield--floating-label">
-      <input
-      required
-      type="email"
-      name="para" id="para" placeholder=" " class="mdl-textfield__input">
-      <span class="mdl-textfield__error">Informar um "Para" é obrigatório!</span>
-      <label class="mdl-textfield__label" for="para">Para: </label>
-      <span class="mdl-textfield__formline"></span>
-    </div>
-  </div> ./[Para] -->
 
   <button type="submit">Cadastrar</button>
 </form>

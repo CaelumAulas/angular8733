@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { CmailInputFieldDirective } from './components/cmail-form-group/cmail-in
   imports: [ // Modulos do Angular ou os que você cria
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     ModuloDeRotasConfiguradas
   ],
   providers: [],
