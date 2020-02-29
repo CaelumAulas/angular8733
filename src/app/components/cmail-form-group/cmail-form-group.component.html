@@ -7,7 +7,31 @@
     <ng-content></ng-content>
     <!-- O input entra na tag e sai aqui -->
 
-    <span class="mdl-textfield__error">Informar um "{{ valorDaLabel }}" é obrigatório!</span>
+
+    <span *ngIf="campo.errors?.required" class="mdl-textfield__error">
+      Informar um "{{ valorDaLabel }}" é obrigatório!
+    </span>
+
+    <span *ngIf="campo.errors?.minlength" class="mdl-textfield__error">
+      Você precisa informar ao menos {{ campo.errors.minlength.requiredLength }} caracteres
+      faltam {{ campo.errors.minlength.requiredLength - campo.errors.minlength.actualLength }}
+    </span>
+    <!-- {{ campo.errors | json }} -->
+    <!-- <div *ngIf="campo.errors">
+      <span *ngIf="campo.errors.required" class="mdl-textfield__error">
+        Informar um "{{ valorDaLabel }}" é obrigatório!
+      </span>
+
+      <span *ngIf="campo.errors.minlength" class="mdl-textfield__error">
+        Você precisa informar ao menos {{ campo.errors.minlength.requiredLength }} caracteres
+        faltam {{ campo.errors.minlength.requiredLength - campo.errors.minlength.actualLength }}
+      </span>
+    </div> -->
+
+
+
+
+
     <label class="mdl-textfield__label" for="{{ idDoInput }}">{{ valorDaLabel }}: </label>
     <!-- Vamos ter bigodinhos -->
     <span class="mdl-textfield__formline"></span>

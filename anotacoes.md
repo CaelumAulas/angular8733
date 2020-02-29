@@ -81,6 +81,15 @@
   - Como pensar pra resolver os desafios? https://www.youtube.com/watch?v=5EBCcP2JMoQ
 - Flexbox Froggy: https://flexboxfroggy.com/
 
+- Como funciona o arrow function?
+```md
+// function()
+O this da function, sempre aponta pro objeto no contexto de execução
+
+// arrow () =>
+O this da () =>, sempre aponta pro objeto no contexto de criação
+```js
+
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado
   - Quando quiser pegar algum evento do usuário: https://developer.mozilla.org/en-US/docs/Web/Events
