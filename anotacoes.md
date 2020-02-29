@@ -1,3 +1,7 @@
+## RxJS
+- https://www.learnrxjs.io/learn-rxjs/operators/transformation/map
+
+
 ## Compilações do Front
 - JS --> Babel
 - 

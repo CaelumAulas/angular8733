@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { map, catchError } from 'rxjs/operators';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 // [REUSO]
 // Quanto vou usar esse código?
@@ -31,7 +33,7 @@ export class CmailCadastroComponent {
     username: new FormControl(
       'omariosouto1',
       [Validators.required],
-      [validateUsername]),
+      [this.validateUsernameComRxJS.bind(this)]),
     phone: new FormControl('11112222', [
       Validators.required,
       Validators.pattern('[0-9]{4}-?[0-9]{4}[0-9]?')
@@ -44,7 +46,49 @@ export class CmailCadastroComponent {
     // se for celular tem que ter 9 digitos
   });
 
-  constructor() {
+  // import { map, catchError } from 'rxjs/operators';
+  constructor(private httpClient: HttpClient) {
+
+    const url = `http://localhost:3200/users/validation/omariosouto6`;
+    // https://www.learnrxjs.io/learn-rxjs/operators
+    // Implementando o RxJS na unha: https://www.youtube.com/watch?v=uQ1zhJHclvs
+    // Debounce: https://www.youtube.com/watch?v=6KS4t97yMlI
+    // Entrada
+    this.httpClient.get(url)
+    // Processamento
+      .pipe(
+        map((input: string) => {
+          console.warn('Dentro do map:', input);
+          return input.toUpperCase();
+        }),
+        catchError(() => {
+          // se der qualque erro ...
+          return 'Deu merda';
+        })
+      )
+    // Saída (normalmente o angular lida com a saída pra gente)
+      .subscribe(
+        (dados) => {
+          console.warn('Deu certo!', dados)
+        },
+        () => {
+          console.log('Deu ruim!')
+        },
+        () => {
+          console.log('terminou')
+        },
+      )
+  }
+
+  validateUsernameComRxJS(formControl) {
+    const url = `http://localhost:3200/users/validation/${formControl.value}`;
+    return this.httpClient.get(url)
+
+    // Terminar isso aqui
+    // Autenticação e o form de Login
+    // Organização e qualidade de código (serviços, arquitetura, separação)
+    // Lidando mais com eventos
+    // Performance no Angular
   }
 
   handleCadastroDeUsuario() {
