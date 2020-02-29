@@ -74,6 +74,12 @@
 - Patterns de input (CPF, CNPJ e coisas assim):
   - https://www.youtube.com/watch?v=r-8isv_TnVA
   - https://github.com/text-mask/text-mask/tree/master/angular2#readme
+- Arrummando trampo fora
+  - https://vanhack.com/
+  - https://www.hackerrank.com/
+  - https://www.amazon.com/Estruturas-Dados-Algoritmos-Com-Javascript/dp/8575226932
+  - Como pensar pra resolver os desafios? https://www.youtube.com/watch?v=5EBCcP2JMoQ
+- Flexbox Froggy: https://flexboxfroggy.com/
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado

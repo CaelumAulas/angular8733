@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 
-// CmailCadastroComponent.formCadastro
-// {
-//   valid:
-//   controls: {
-//     name: ...
-//   }
-// }
 
 @Component({
   selector: 'cmail-cadastro-page',
@@ -16,20 +9,26 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class CmailCadastroComponent {
   formCadastro = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    username: new FormControl('', []),
-    phone: new FormControl('', []),
-    avatar: new FormControl('', []),
-    password: new FormControl('', []),
+    username: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [Validators.required]),
+    avatar: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
 
   constructor() {
-    console.log(this.formCadastro);
   }
 
   handleCadastroDeUsuario() {
-    console.log('Submit realizado com sucessinhos!!!');
-    console.log('valid?', this.formCadastro.get('name').valid);
-    // console.log(this.formCadastro.value);
+    if(this.formCadastro.valid) {
+      console.log('Sucesso!')
+    } else {
+      // No próximo episódio veremoms o lance da "function"
+      console.log(this.formCadastro.controls);
+      Object.keys(this.formCadastro.controls).forEach((nomeDoCampo) => {
+          console.log(nomeDoCampo)
+          this.formCadastro.get(nomeDoCampo).markAsTouched({ onlySelf: true })
+      })
+    }
   }
 
 }

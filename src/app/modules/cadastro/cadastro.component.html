@@ -8,10 +8,9 @@
   </cmail-form-field>
 
 
-  <cmail-form-field>
+  <cmail-form-field [campo]="formCadastro.get('username')">
     <input
       cmailInputField
-      id="username"
       name="username"
       formControlName="username"
       placeholder="Usuário">
