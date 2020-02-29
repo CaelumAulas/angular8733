@@ -80,7 +80,7 @@
   - https://www.amazon.com/Estruturas-Dados-Algoritmos-Com-Javascript/dp/8575226932
   - Como pensar pra resolver os desafios? https://www.youtube.com/watch?v=5EBCcP2JMoQ
 - Flexbox Froggy: https://flexboxfroggy.com/
-
+- Post de Regex: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
 - Como funciona o arrow function?
 ```md
 // function()
@@ -88,7 +88,8 @@ O this da function, sempre aponta pro objeto no contexto de execução
 
 // arrow () =>
 O this da () =>, sempre aponta pro objeto no contexto de criação
-```js
+```
+- Guia de update do angular: https://update.angular.io/#4.0:9.0l2
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado

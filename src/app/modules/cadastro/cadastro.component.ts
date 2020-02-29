@@ -13,9 +13,16 @@ export class CmailCadastroComponent {
   formCadastro = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
     username: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern('[0-9]{4}-?[0-9]{4}[0-9]?')
+      // https://regex101.com/r/a2JcP0/1
+    ]),
     avatar: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
+    // tem que lidar com tamanho
+    // tem que ser só numeros
+    // se for celular tem que ter 9 digitos
   });
 
   constructor() {

@@ -27,8 +27,12 @@
       cmailInputField
       id="phone"
       name="phone"
+      type="tel"
       formControlName="phone"
       placeholder="Telefone">
+      <span *ngIf="formCadastro.get('phone').errors?.pattern" class="mdl-textfield__error">
+        Informar um telefone com "2222-2222" ou um celular com "2222-22229" é obrigatório
+      </span>
   </cmail-form-field>
 
   <cmail-form-field [campo]="formCadastro.get('avatar')">
