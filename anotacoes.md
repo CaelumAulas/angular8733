@@ -91,6 +91,15 @@ O this da () =>, sempre aponta pro objeto no contexto de criação
 ```
 - Guia de update do angular: https://update.angular.io/#4.0:9.0l2
 
+- Erros do http
+  - 20x BOM
+  - 30x Coisas de rede
+  - 40x Algo deu ruim (e vc sabe)
+  - 50x Algo deu ruim no servidor
+  - https://httpstatusdogs.com/
+- Para entender um exemplo como aplicar angular no trampo: https://hipsters.tech/cultura-frontend-no-itau-hipsters-on-the-road-13/
+
+
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado
   - Quando quiser pegar algum evento do usuário: https://developer.mozilla.org/en-US/docs/Web/Events

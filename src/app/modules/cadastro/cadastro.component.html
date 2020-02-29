@@ -19,6 +19,7 @@
       name="username"
       formControlName="username"
       placeholder="Usuário">
+      {{ formCadastro.get('username').errors | json }}
   </cmail-form-field>
 
 
@@ -30,6 +31,8 @@
       type="tel"
       formControlName="phone"
       placeholder="Telefone">
+      <!-- O ideal aqui seria criar um componente ou uma
+    validação customizada :) -->
       <span *ngIf="formCadastro.get('phone').errors?.pattern" class="mdl-textfield__error">
         Informar um telefone com "2222-2222" ou um celular com "2222-22229" é obrigatório
       </span>
