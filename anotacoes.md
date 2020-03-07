@@ -102,7 +102,10 @@ O this da () =>, sempre aponta pro objeto no contexto de criação
   - 50x Algo deu ruim no servidor
   - https://httpstatusdogs.com/
 - Para entender um exemplo como aplicar angular no trampo: https://hipsters.tech/cultura-frontend-no-itau-hipsters-on-the-road-13/
-
+- Documentação de componentes
+  - https://storybook.js.org/docs/guides/guide-angular/
+- Como criar senhas seguras:
+  - https://www.alura.com.br/artigos/como-criar-uma-boa-senha
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado
