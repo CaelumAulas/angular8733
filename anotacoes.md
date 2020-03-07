@@ -4,6 +4,8 @@
 - Le a doc do bootstrap entendendo a classificação das coisas de tela
 
 
+## Testes
+- https://www.cypress.io/
 
 ## RxJS
 - https://www.learnrxjs.io/learn-rxjs/operators/transformation/map

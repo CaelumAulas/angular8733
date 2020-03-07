@@ -19,7 +19,7 @@ import { LoginService } from './services/login.service';
     SharedComponentsModule
   ],
   providers: [
-    LoginService,
+    LoginService, // Código dessa classe ta aqui: http://dontpad.com/coisos
   ],
   exports: [],
 })
