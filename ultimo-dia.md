@@ -3,13 +3,13 @@
 - [x] Campos na tela
 - [x] Validações
 - [x] Split dos módulos (Login) loadChild
-- [ ] Se comunicar com o servidor e ver se a pessoa pode logar
-    - [ ] Como organizar e reusar esses códigos
-- [ ] Guardas de rota
+- [x] Se comunicar com o servidor e ver se a pessoa pode logar
+    - [x] Como organizar e reusar esses códigos
+- [x] Guardas de rota
 
 ## Tarde
 
-- Listar Emails
-- Deleção de email
-- Acessar email
-- Broadcast de eventos
+- [x] Listar Emails
+- [ ] Deleção de email
+- [ ] Broadcast de eventos
+- [?] Acessar email (desafio)

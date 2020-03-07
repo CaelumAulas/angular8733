@@ -4,10 +4,12 @@
     <div class="page-content">
 
       <cmail-card
-        *ngFor="let email of emails"
+        *ngFor="let email of filtraPelaBusca()"
         assunto="email.assunto"
         para="email.para"
-        conteudo="email.conteudo">
+        conteudo="email.conteudo"
+        (emailVaiSumir)="apagaEmail(email.id)">
+        {{ email.assunto }}
       </cmail-card>
 
       <div class="mdl-grid">

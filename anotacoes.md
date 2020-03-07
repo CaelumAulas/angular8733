@@ -6,6 +6,14 @@
 ## Como o whatsapp funciona?
 - https://www.youtube.com/watch?v=vvhC64hQZMk
 
+
+## Melhorando codigos
+- https://www.amazon.com.br/Refactoring-Improving-Design-Existing-Code/dp/0134757599/ref=asc_df_0134757599/?tag=googleshopp00-20&linkCode=df0&hvadid=379735814613&hvpos=&hvnetw=g&hvrand=18424682779189824874&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-464425925893&psc=1
+
+
+## Como o redux funciona/event emitter
+- https://www.youtube.com/watch?v=DbEpBeZ6yic
+
 ## Testes
 - https://www.cypress.io/
 

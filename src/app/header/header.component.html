@@ -16,7 +16,12 @@
         <span class="material-icons">search</span>
       </label>
       <div class="mdl-textfield__expandable-holder">
-        <input class="headerSearch__input mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"
+        <input
+          (input)="handleSearch($event)"
+          class="headerSearch__input mdl-textfield__input"
+          type="text"
+          name="sample"
+          id="fixed-header-drawer-exp"
           placeholder="Filtrar e-mails...">
       </div>
     </div>
