@@ -11,6 +11,7 @@ import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { CmailInboxComponent } from './modules/inbox/inbox.component';
 
 import { SharedComponentsModule } from './components/shared-components.module';
+import { AuthGuard } from './guards/auth.guard';
 // import { CmailFormGroup } from './components/cmail-form-group/cmail-form-group.component';
 // import { CmailInputFieldDirective } from './components/cmail-form-group/cmail-input-field.directive';
 
@@ -31,7 +32,7 @@ import { SharedComponentsModule } from './components/shared-components.module';
     SharedComponentsModule,
     ModuloDeRotasConfiguradas
   ],
-  providers: [],
+  providers: [ AuthGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

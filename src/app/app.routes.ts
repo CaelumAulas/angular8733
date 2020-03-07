@@ -1,10 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { CmailInboxComponent } from './modules/inbox/inbox.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const rotas: Routes = [
   // Home == /
-  { path: '', component: CmailInboxComponent },
+  { path: '', component: CmailInboxComponent, canActivate: [ AuthGuard ] },
   { path: 'cadastro', component: CmailCadastroComponent },
   {
     path: 'login',

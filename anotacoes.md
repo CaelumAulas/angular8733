@@ -3,6 +3,8 @@
 - Geralzao aqui: https://pinterest.github.io/gestalt/#/Video
 - Le a doc do bootstrap entendendo a classificação das coisas de tela
 
+## Como o whatsapp funciona?
+- https://www.youtube.com/watch?v=vvhC64hQZMk
 
 ## Testes
 - https://www.cypress.io/
