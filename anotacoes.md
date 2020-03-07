@@ -1,3 +1,10 @@
+## Design Systems
+- Forms se baseia aqui: https://material.angular.io/
+- Geralzao aqui: https://pinterest.github.io/gestalt/#/Video
+- Le a doc do bootstrap entendendo a classificação das coisas de tela
+
+
+
 ## RxJS
 - https://www.learnrxjs.io/learn-rxjs/operators/transformation/map
 
@@ -106,6 +113,8 @@ O this da () =>, sempre aponta pro objeto no contexto de criação
   - https://storybook.js.org/docs/guides/guide-angular/
 - Como criar senhas seguras:
   - https://www.alura.com.br/artigos/como-criar-uma-boa-senha
+- Lidando com tratamento de erros:
+  - https://www.youtube.com/watch?v=ZgWyha2d6iY&t=16s
 
 ## Quando o angular atualiza a tela
 - Quando algum evento assincrono for disparado

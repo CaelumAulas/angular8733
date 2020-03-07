@@ -1,12 +1,16 @@
 import { Routes, RouterModule } from '@angular/router';
 import { CmailCadastroComponent } from './modules/cadastro/cadastro.component';
 import { CmailInboxComponent } from './modules/inbox/inbox.component';
-import { LoginComponent } from './modules/login/login.component';
+
 const rotas: Routes = [
   // Home == /
   { path: '', component: CmailInboxComponent },
   { path: 'cadastro', component: CmailCadastroComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    loadChildren: () => import('./modules/login/login.module')
+      .then((modulo) => modulo.LoginModule)
+  },
   // Criem um componente (Userm analytics)
   { path: '**', redirectTo: '' },
 ]
